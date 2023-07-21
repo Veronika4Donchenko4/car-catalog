@@ -3,17 +3,24 @@ import style from './Home.module.css';
 import CreateCarForm from './create-car-form/CreateCarForm';
 import CarItem from './car-item/CarItem'
 import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { CarService } from '../../../services/car.servise';
 
 
 
 function Home() {
   const [cars, setCars] = useState(carsData)
   console.log(cars)
-//  const filterCars = cars.filter(car => car.price > 30000)
 
-useEffect(() => {
-console.log('hey')
-}, [])
+
+// useEffect(() => {
+//   const fetchData = async () => {
+//   const data = await CarService.getAll()
+
+//   setCars(data)
+//   }
+//   fetchData()
+// }, [])
 
     return (
       <div>
